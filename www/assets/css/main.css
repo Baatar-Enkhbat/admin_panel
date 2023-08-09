@@ -1,0 +1,73 @@
+.alex_Brush {
+    font-family: 'Alex Brush', cursive;
+}
+
+.zenOldMincho {
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.bg_main {
+    background: #ffdcc4;
+}
+
+.bg_btn {
+    background: #71929b;
+}
+
+.fs_btn {
+    font-size: 0.8rem;
+}
+
+.admin_main {
+    width: 100%;
+    height: 100vh;
+}
+
+.admin_main__box {
+    width: 600px;
+    height: 300px;
+}
+
+.admin_main__form {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.admin_main__input {
+    width: 300px;
+    border: 1px solid #ffc4e7;
+}
+
+.admin_main__input:focus {
+    border-color: #c4e7ff;
+    outline: 0;
+}
+
+.admin_main__btn {
+    border: none;
+    background: #fff;
+}
+
+
+/* admin panel main */
+
+.admin_panel_main {
+    width: 100%;
+    height: 100vh;
+}
+
+.admin_panel__menu_item {
+    width: 100%;
+    color: #333;
+    background: #c4e7ff;
+    transition: all 0.2s ease-in-out;
+}
+
+.admin_panel__menu_item:hover {
+    transform: translateX(-1.5rem);
+}
+
+
+/* add */

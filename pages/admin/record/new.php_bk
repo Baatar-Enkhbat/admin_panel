@@ -1,0 +1,31 @@
+<?php
+
+$title = post('title', 45);
+$text = post('text', 300);
+$image = post('image', 300);
+
+try {
+    $success = _exec(
+        "insert into transaction set
+            title=?,
+            text=?,
+            image=?,
+            create_user_id=?,
+            create_time=now()
+        ",
+        'sss',
+        [$title, $text, $image, $_SESSION['id']],
+        $count
+    );
+
+    $_SESSION['messages'] = ["\"$title\" утгатай гүйлгээг амжилттай үүсгэлээ. "];
+} catch (Exception $e) {
+    $_SESSION['errors'] = ["Системийн алдаа гарлаа. Та дараа дахин оролдоно уу"];
+    // echo "Алдаа: " . $e->getMessage() . ' : ' . $e->getFile() . ' : ' . $e->getLine() . ' : Code ' . $e->getCode();
+} finally {
+    if (isset($e)) {
+        logError($e);
+    }
+}
+
+redirect('/user/home');
